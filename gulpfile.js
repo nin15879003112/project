@@ -9,13 +9,13 @@ var sass = require("gulp-sass");
 var webserver = require("gulp-webserver");
 var clean = require("gulp-clean");
 
-function doCss() {
-    return src("./origin/css/**/*.css")
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(minifyCss())
-        .pipe(dest("./publish/css"));
-}
+// function doCss() {
+//     return src("./origin/css/**/*.css")
+//         .pipe(sass())
+//         .pipe(autoprefixer())
+//         .pipe(minifyCss())
+//         .pipe(dest("./publish/css"));
+// }
 
 function doJS() {
     return src("./origin/js/**/*.js")
@@ -28,20 +28,26 @@ function doJS() {
 
 
 function doHTML() {
-    return src("./origin/HTML/*.html")
+    return src("./origin/html/*.html")
         .pipe(minifyHtml({
             collapseWhitespace: true,
             "minifyCSS": true,
             "minifyJS": true
         }))
-        .pipe(dest("./publish/"))
+        .pipe(dest("./publish/html"))
 }
 
-function doResource() {
-    return src("./origin/resource/**/*.*")
-        .pipe(dest("./publish/resource/"))
-}
+// function doResource() {
+//     return src("./origin/resource/**/*.*")
+//         .pipe(dest("./publish/resource/"))
+// }
 
+
+function dorcss() {
+    return src("./origin/resource/css/*.css")
+        .pipe(minifyCss())
+        .pipe(dest("./public/resource/css"));
+}
 
 function doClean() {
     return src("./publish/", { read: false, allowEmpty: true })
@@ -50,7 +56,7 @@ function doClean() {
 
 function webServer() {
     // 定位资源 
-    return src("./publish")
+    return src("./publish", { allowEmpty: true })
         .pipe(webserver({
             host: "localhost",
             port: 3003,
@@ -65,10 +71,10 @@ function webServer() {
         }))
 }
 function refresh() {
-    return watch("./origin", series(doClean, [doCss, doHTML, doJS, doResource]))
+    return watch("./origin", series(doClean, [doHTML, doJS, dorcss]))
 }
 
 module.exports.webserver = webserver;
-module.exports.doResource = doResource;
-module.exports.a = series(doClean, [doCss, doHTML, doJS, doResource], webServer);
+// module.exports.doResource = doResource;
+// module.exports.a = series(doClean, [doHTML, doJS, doResource], webServer);
 module.exports.aa = series(webServer, refresh);
