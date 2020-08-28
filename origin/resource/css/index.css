@@ -1,0 +1,546 @@
+
+.header{
+    width: 100%;
+    height: 40px;
+    background: #333;
+    /* position: fixed; */
+    /* top: 0; */
+    font-size: 12px;
+    line-height: 40px;
+}
+.header a{
+    color: #fff;
+}
+.header a:hover{
+    color: #ccc;
+}
+.header .left-content>li, .header .right-content>li {
+    display: inline-block;
+}
+.left-content{
+    margin-left: 145px;
+    float: left;
+}
+.scan-code{
+
+    position: relative;
+}
+.scan-code:hover .border-content{
+    display: block;
+}
+.border-content{
+    position: absolute;
+    display: none;
+    z-index: 10000;
+    left: -60px;
+    top: 40px;
+    width: 140px;
+    background: #fff;
+}
+.header .left-content .scan-code .border-content .border {
+    margin-top: 4px;
+    border: 1px solid #eee;
+}
+.header .left-content .scan-code .border-content .border .qr-code {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 12px;
+    display: block;
+}
+.header .left-content .scan-code .border-content .border .title {
+    display: block;
+    margin: 10px 0 18px;
+    line-height: 0;
+    color: #333;
+    text-align: center;
+}
+.header .left-content .item-app {
+    margin-left: 20px;
+    display: inline-block;
+}
+/* 右边导航栏 */
+.header .right-content {
+    float: right;
+    margin-right: 92px;
+}
+.header .right-content>.item-frist {
+    padding-right: 11px;
+}
+.header .right-content>.item {
+    padding: 0 11px;
+}
+.header .right-content .item-cart {
+    margin-left: 13px;
+}
+.header .right-content>.item .notice {
+    position: relative;
+}
+.header .right-content>.item .notice:hover .notice-content{
+    display: block;
+}
+.header .right-content>.item .notice .notice-content {
+    display: none;
+    z-index: 10000;
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+.header .right-content>.item .notice .notice-content>ul {
+    width: 180px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-top: 4px;
+    padding: 15px 15px 30px 20px;
+}
+.header .right-content>.item .notice .notice-content>ul>.item {
+    padding-bottom: 8px;
+    border-bottom: #eee 1px solid;
+    padding-top: 10px;
+    line-height: 20px;
+}
+.header .right-content>.item .notice .notice-content>ul>li:nth-child(1){
+    padding-top: 0;
+}
+.header .right-content>.item .notice .notice-content>ul>li>a {
+    color: #666;
+}
+.header .right-content>.item .notice .notice-content>ul>.Red>a{
+    color: red;
+}
+/* logo and nav*/
+.logo-container {
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+.logo-container .header-logo {
+    width: 98px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 55px 0;
+}
+.logo-container .nav-container {
+    width: 1190px;
+    margin: 0 auto;
+   
+  
+}
+.logo-container .nav-container .nav {
+    display: inline-block;
+}
+.logo-container .nav-container .nav>ul {
+    font-size: 0;
+    float: left;
+    width: 930px;
+    height: 50px;
+    overflow: hidden;
+}
+.logo-container .nav-container .nav>ul li.item-first {
+    padding-right: 8px;
+}
+.logo-container .nav-container .nav>ul li.item {
+    padding: 15px;
+}
+.logo-container .nav-container .nav>ul>li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 80px;
+}
+.logo-container .nav-container .nav>ul>li>a {
+    font-weight: bold;
+    color: #333;
+}
+.logo-container .nav-container .nav>ul>li>a:hover{
+    border-bottom: 2px solid #000;
+}
+.logo-container .nav-container .nav .search-wrapper {
+    float: right;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+.logo-container .nav-container .nav .search-wrapper .search {
+    width: 180px;
+    height: 22px;
+    border-bottom: 1px solid #333!important;
+    padding-bottom: 2px;
+    position: relative;
+}
+.logo-container .nav-container .nav .search-wrapper .search input {
+    padding: 0;
+    width: 160px;
+    border: 0;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    height: 20px;
+}
+.logo-container .nav-container .nav .search-wrapper .search .bg-Details_page_enlarge {
+    display: inline-block;
+    cursor: pointer;
+    width: 15px;
+    height: 16px;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png)-177px -10px;
+}
+/* 搜索的提示框  输入事件触发 */
+#logo form.input_box .searchmenu {
+    width: 180px;
+    top: 29px;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #4c2601;
+    box-shadow: 0 0 5px #ccc;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+    font-size: 12px;
+    color: #333;
+}
+#logo form.input_box .searchmenu li {
+    padding: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 24px;
+}
+#logo form.input_box .search-item {
+    float: left;
+    width: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#logo form.input_box .search-count {
+    float: right;
+}
+
+/* 二级导航样式 */
+
+.logo-container .nav-container-down {
+    background: hotpink;
+    position: absolute;
+    top: 223px;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.logo-container .nav-container-down>.nav-down-menu {
+    width: 100%;
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    padding: 30px 0 70px 0;
+    border-bottom: 3px solid #333;
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container {
+    margin: 0 auto;
+    width: 1190px;
+    margin-left: 179.6px;
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>dl {
+    float: left;
+    margin-right: 70px;
+    font: 12px/20px tahoma,'Microsoft YaHei';
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>.item {
+    margin-left: 70px;
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>dl>dt {
+    padding-bottom: 13px;
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>dl>dt>a {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>dl>dd {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.logo-container .nav-container-down>.nav-down-menu>.sub-container>dl>dd>a {
+    color: #666;
+}
+.logo-container .line{
+    border-bottom: 1px #ccc solid;
+}
+
+/* banner */
+/* .carouselExampleIndicators .carousel-indicators>li{
+    border: none;
+    background: #ccc;
+} */
+/* .carouselExampleIndicators .carousel-indicators .active{
+    background: #000!important;
+    padding: 0 5px!important;
+} */
+
+main{
+    width: 100%;
+    min-height: 1000px;
+    background: pink;
+}
+.new-commodity{
+    width: 100%;
+    min-height: 400px;
+}
+.new-commodity h2{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px 0 ;
+}
+.new-commodity p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.new-commodity p span{
+    margin: 0 15px;
+}
+.new-commodity p span:nth-of-type(1){
+    border-bottom:1px solid #333 ;
+}
+.commodity-box{
+    background: #fff;
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 405px;
+}
+.commodity-box>a{
+    font-size: 40px;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+.commodity-box>a:nth-of-type(1){
+    left: 10px;
+}
+.commodity-box>a:nth-of-type(2){
+    right: 10px;
+}
+.commodity-box .new-commodity-pic{
+    width: 920px;
+    height: 405px;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+    
+}
+.new-commodity-pic>ul{
+    position: absolute;
+    white-space: nowrap;
+    overflow: visible;
+    left: 0;
+}
+.new-commodity-pic>ul>li{
+    display: inline-block;
+    width: 230px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+.new-commodity-pic>ul>li:hover{
+    background: #f6f6f6;
+}
+.new-commodity-pic>ul>li:hover dl dd h5 i{
+    display: inline-block;
+}
+.new-commodity-pic>ul>li>dl>dt>a{
+    width: 100%;
+   
+    display: inline-block;
+    height: 230px;
+}
+.new-commodity-pic>ul>li>dl>dt>a>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.new-commodity-pic>ul>li>dl>dd>h4>img{
+    margin-top: 15px;
+    width: 54px;
+    height: 24px;
+}
+.new-commodity-pic>ul>li>dl>dd>p{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.new-commodity-pic>ul>li>dl>dd>h5{
+position: relative;
+text-align: center;
+}
+.new-commodity-pic>ul>li>dl>dd>h5>i{
+    position: absolute;
+    right: 30px;
+    font-size: 12px;
+    display: none;
+    cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+/* 底部 */
+.footer-feature, .footer-help {
+    overflow: hidden;
+    width: 100%;
+    background: #333;
+    border-bottom: 1px solid #666;
+}
+.footer-feature .container, .footer-help .container {
+    width: 1190px;
+    margin: 0 auto;
+}
+.footer-feature .container .customer-service {
+    border-bottom: #666;
+    color: #fff;
+}
+.footer-feature .container .customer-service .content {
+    margin-top: 46px;
+    margin-bottom: 42px;
+    font-size: 18px;
+}
+.footer-feature .container .content li, .footer-help .container .content li {
+    display: inline-block;
+}
+.footer-feature .container .customer-service .content .item {
+    margin-left: 50px;
+}
+/* 四个图标 */
+.footer-feature .container .customer-service .content .bg-bottom_logistics {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -10px -10px;
+}
+.footer-feature .container .customer-service .content .bg-bottom_ensure {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -57px -57px;
+}
+.footer-feature .container .customer-service .content .bg-bottom_service {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -10px -57px;
+}
+.footer-feature .container .customer-service .content .bg-bottom_Price_difference{
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background: url(https://pcs1.ygimg.cn/template/common/images/css_sprites.png) -57px -10px;
+}
+
+.footer-feature .container .customer-service .content i, .footer-feature .container .customer-service .content span.title {
+    vertical-align: middle;
+}
+.footer-feature .container .customer-service .content .title {
+    margin-left: 10px;
+}
+.footer-feature .container .customer-service .content .title>a{
+    color: #fff;
+}
+/* footer-help */
+
+.footer-help .guide-container .content {
+    margin-top: 25px;
+}
+.footer-help .guide-container .content .item {
+    margin-left: 80px;
+}
+.footer-help .guide-container .content dt {
+    color: #fff;
+}
+.footer-help .guide-container .content .dd-title-first {
+    margin-top: 20px;
+}
+.footer-help .guide-container .content .dd-title {
+    margin-top: 15px;
+}
+.footer-help .guide-container .link {
+    color: #666;
+}
+.footer-help .guide-container .link:hover{
+    color: #fff;
+}
+/* 二维码 */
+.footer-help .national-certification {
+    color: #fff;
+}
+.footer-help .national-certification .content {
+    display: inline-block;
+    margin-top: 160px;
+}
+.footer-help .national-certification .qr-code, .footer-help .national-certification .qr-code li {
+    display: inline-block;
+}
+.footer-help .national-certification .content .item {
+    margin-left: 12px;
+}
+.footer-help .national-certification .qr-code {
+    margin-left: 200px;
+    vertical-align: bottom;
+}
+.footer-help .national-certification .qr-code .border {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 12px;
+}
+.footer-help .national-certification .qr-code .border .img-app {
+    box-sizing: border-box;
+    padding: 8px 0 0 8px;
+}
+.footer-help .national-certification .qr-code .title {
+    text-align: center;
+}
+.footer-help .national-certification .qr-code .item {
+    margin-left: 54px;
+}
+
+.footer-help .friendly-link {
+    margin-top: 25px;
+}
+.footer-help .friendly-link .title-first {
+    margin-right: 10px;
+}
+.footer-help .friendly-link .title {
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer-help .friendly-link a {
+    color: #fff;
+}
+
+.footer-help .copyright {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    color: #fff;
+}
+.footer-help .copyright  {
+    color: #fff;
+}
+.footer-help .copyright a {
+    color: #fff;
+}

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* reset
+用来清除默认样式 */
+*, ::after, ::before {
+    box-sizing: none;
+}
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure,figcaption{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:16px;
+    font-weight: normal;
+}
+ul,ol,li{
+    list-style: none;
+}
+em,i{
+    font-style: normal;
+}
+a,u{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none !important; 
+}
+b,strong{
+    font-weight: normal;
+}
+img,fieldset{
+    border: none;
+}
+img{
+    vertical-align: middle;
+    display: inline-block;
+}
+input{
+    outline: none;
+}
+textarea{
+    /* 禁止用户拖拽大小 */
+    resize: none;
+}
+
+
+/* 封装自己的类名 */
+
+.float_left{
+    float: left;
+}
+.float_right{
+    float: right;
+}
+.border_none{
+    border: none!important;
+}
+.text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.clear_fix:after{
+    content: "";
+    clear: b
+}
+
+    
